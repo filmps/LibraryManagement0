@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryManagement.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240227215504_InitialCreate")]
+    [Migration("20240228064407_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -82,6 +82,9 @@ namespace LibraryManagement.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("BorrowedBookId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CustomerName")

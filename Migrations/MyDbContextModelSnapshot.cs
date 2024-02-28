@@ -81,6 +81,9 @@ namespace LibraryManagement.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("BorrowedBookId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("TEXT");

@@ -17,8 +17,9 @@ namespace LibraryManagement.ViewModels
 
         //AUTHOR--------------------------------------------------
         public int AuthorId { get; set; }
-        public string AuthorName { get; set; }
+        public string? AuthorName { get; set; }
         public List<Author> AuthorList { get; set; } = new List<Author>();
+
         [Display(Name = "Author")]
         public List<int> SelectedAuthorId { get; set; } = new List<int>();
 
@@ -37,27 +38,9 @@ namespace LibraryManagement.ViewModels
         
         public Branch Branch { get; set; }
         
-        //----------------------------------------------------------------
-        // public int AuthorId { get; set; }
-
-
-        // public string? AuthorName { get; set; } = string.Empty;
-        // public string? BranchName { get; set; } = string.Empty;
-
-        // public List<int> SelectedAuthorId { get; set; } = new List<int>();
-        // public List<Author> AuthorList { get; set; } = new List<Author>();
-        // public List<int> SelectedBranchId { get; set; } = new List<int>();
-        // public List<Branch> BranchList { get; set; } = new List<Branch>();
-
-        // public int? CustomerId { get; set; }
-        // public Customer? Customer { get; set; }
-        // public int SelectedAuthorId { get; set; }
-        // public int SelectedBranchId { get; set; }
-        // public IEnumerable<Author>? AuthorList { get; set; }
-        // public IEnumerable<Branch>? BranchList { get; set; }
-
-
+        
         //CUSTOMER--------------------------------------------------
+        public List<Customer> CustomerList { get; set; } = new List<Customer>();
         public Customer? CheckedOutByCustomer { get; set; }
         public string GetStatus()
         {

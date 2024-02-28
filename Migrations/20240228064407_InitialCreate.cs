@@ -42,7 +42,8 @@ namespace LibraryManagement.Migrations
                 {
                     ID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CustomerName = table.Column<string>(type: "TEXT", nullable: false)
+                    CustomerName = table.Column<string>(type: "TEXT", nullable: false),
+                    BorrowedBookId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -28,11 +28,13 @@ namespace LibraryManagement.Controllers
         {
             var authors = _dbContext.Authors.ToList();
             var branches = _dbContext.Branches.ToList();
+            var customers = _dbContext.Customers.ToList();
 
             var viewModel = new BookViewModel
             {
                 AuthorList = authors,
-                BranchList = branches
+                BranchList = branches,
+                CustomerList = customers
             };
 
             return View(viewModel);
@@ -49,12 +51,14 @@ namespace LibraryManagement.Controllers
             // Convert the Book model to BookViewModel
             var authors = _dbContext.Authors.ToList();
             var branches = _dbContext.Branches.ToList();
+            var customers = _dbContext.Customers.ToList();
 
             var bookViewModel = new BookViewModel
             {
                 BookId = book.BookId,
                 AuthorList = authors,
-                BranchList = branches
+                BranchList = branches,
+                CustomerList = customers
                 // Map other properties as needed
             };
 

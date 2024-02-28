@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jmRcZ9jKl3LPrXnBaEWGBeNnA9bnmomgYtZpCFw4QbeHVGwD/fRQ9PpQj2mVfHlDEZRDzP+pfq56NoCEPjY6Yg==",
+  "dgSpecHash": "H3/ZhWz8PRmdD0XkQmK738SMO1uSPJoE6O1rm/5H1ckG8QXpjYcXaJWMvR2hCF78dbcOf/Gefq/Zv+SVNxvK9Q==",
   "success": true,
-  "projectFilePath": "/Users/filmps/Desktop/code/NET/net50/LibraryManagement/LibraryManagement.csproj",
+  "projectFilePath": "/Users/filmps/Desktop/code/NET02/LibraryManagement0/LibraryManagement.csproj",
   "expectedPackageFiles": [
     "/Users/filmps/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/filmps/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

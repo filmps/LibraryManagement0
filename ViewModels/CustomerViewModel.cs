@@ -8,12 +8,15 @@ namespace LibraryManagement.ViewModels
 {
     public class CustomerViewModel
     {
+        //CUSTOMER--------------------------------------------------
         public int CustomerId { get; set; }
         
         [Required(ErrorMessage = "Customer name is required.")]
         public string? CustomerName { get; set; }    
 
-        public List<int> SelectedBookId { get; set; } = new List<int>();
+
+        //BOOK--------------------------------------------------
         public List<Book> BookList { get; set; } = new List<Book>();    
+        public List<int> SelectedBookId { get; set; } = new List<int>();
     }
 }

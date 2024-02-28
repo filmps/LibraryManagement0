@@ -2532,11 +2532,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/filmps/Desktop/code/NET/net50/LibraryManagement/LibraryManagement.csproj",
+      "projectUniqueName": "/Users/filmps/Desktop/code/NET02/LibraryManagement0/LibraryManagement.csproj",
       "projectName": "LibraryManagement",
-      "projectPath": "/Users/filmps/Desktop/code/NET/net50/LibraryManagement/LibraryManagement.csproj",
+      "projectPath": "/Users/filmps/Desktop/code/NET02/LibraryManagement0/LibraryManagement.csproj",
       "packagesPath": "/Users/filmps/.nuget/packages/",
-      "outputPath": "/Users/filmps/Desktop/code/NET/net50/LibraryManagement/obj/",
+      "outputPath": "/Users/filmps/Desktop/code/NET02/LibraryManagement0/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/filmps/.nuget/NuGet/NuGet.Config"
