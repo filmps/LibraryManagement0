@@ -1,0 +1,24 @@
+<!-- 📂Views📂Author 📑Create.cshtm-->
+
+@model LibraryManagement.Models.Author
+
+<h2>Create Author</h2>
+
+<form asp-controller="Author" asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="AuthorName">Author Name</label>
+        @* create BlankForm *@
+        <input asp-for="AuthorName" class="form-control" />
+        @* if error, show red text *@
+        <span asp-validation-for="AuthorName" class="text-danger"></span> 
+    </div>
+
+    <p class=title>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+</form>
+
+<p class=title>
+    <a asp-action="Index" class="BackLink">Back to Author List</a>
+</p>

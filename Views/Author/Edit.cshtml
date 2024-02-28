@@ -1,0 +1,24 @@
+<!-- 📂Views📂Author 📑Edit.cshtm-->
+
+@* @model LibraryManagement.Models.Author *@
+@model LibraryManagement.ViewModels.AuthorViewModel
+
+<h2>Edit Author</h2>
+
+<form asp-controller="Author" asp-action="Edit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="AuthorName">Author Name</label>
+        <input asp-for="AuthorName" class="form-control" />
+        <span asp-validation-for="AuthorName" class="text-danger"></span> 
+    </div>
+
+    <p class=title>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+</form>
+
+<p class=title>
+    @* do *@
+    <a asp-action="Details" asp-route-id="@Model.AuthorId">Back to Author Details</a> |
+</p>

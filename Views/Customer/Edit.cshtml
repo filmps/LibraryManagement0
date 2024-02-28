@@ -1,0 +1,24 @@
+<!-- 📂Views📂Customer 📑Edit.cshtm-->
+
+@* @model LibraryManagement.Models.Customer *@
+@model LibraryManagement.ViewModels.CustomerViewModel
+
+<h2>Edit Customer</h2>
+
+<form asp-controller="Customer" asp-action="Edit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CustomerName">Customer Name</label>
+        <input asp-for="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName" class="text-danger"></span> 
+    </div>
+
+    <p class=title>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+</form>
+
+<p class=title>
+    @* do *@
+    <a asp-action="Details" asp-route-id="@Model.CustomerId">Back to Customer Details</a> |
+</p>

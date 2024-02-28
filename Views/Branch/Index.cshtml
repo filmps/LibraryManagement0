@@ -1,0 +1,38 @@
+<!-- 📂Views📂Branch 📑Index.cshtm-->
+
+@model List<LibraryManagement.Models.Branch>
+
+<h2>Branch List</h2>
+
+<p class=title>
+    <a href='@Url.Action("Create", "Branch")' class="btn btn-primary">Create Branch</a>
+</p>
+
+
+<p class=title>Total: @Model.Count</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Branch Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var branch in Model)
+        {
+            <tr>
+                <td>@branch.ID</td>
+                <td>@branch.BranchName</td>
+                <td>
+                    <a href='@Url.Action("Details", "Branch", new { id = branch.ID })' class="btn btn-info1">Details</a>
+                    &nbsp;
+                    <a href='@Url.Action("Edit", "Branch", new { id = branch.ID })' class="btn btn-info2">Edit</a>
+                    &nbsp;
+                    <a href='@Url.Action("Delete", "Branch", new { id = branch.ID })' class="btn btn-warning"
+                    onclick="return confirm('Are you sure you want to delete this branch?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
