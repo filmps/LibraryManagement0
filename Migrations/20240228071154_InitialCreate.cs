@@ -59,7 +59,8 @@ namespace LibraryManagement.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: true),
                     AuthorId = table.Column<int>(type: "INTEGER", nullable: true),
                     BranchId = table.Column<int>(type: "INTEGER", nullable: false),
-                    CustomerId = table.Column<int>(type: "INTEGER", nullable: true)
+                    CustomerId = table.Column<int>(type: "INTEGER", nullable: true),
+                    status = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

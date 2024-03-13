@@ -91,6 +91,41 @@ namespace LibraryManagement.Controllers
 
             return View(viewModel);
         }
+        //GO TO CHECKOUT VIEW---------------------------
+        public IActionResult Checkout(int id)
+        {
+            var book = _dbContext.Books
+            .Include(b => b.Author) // Include the Author related data
+            .Include(b => b.Branch) // Include the Branch related data
+            .Include(b => b.Customer)
+            .FirstOrDefault(b => b.BookId == id);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            var customers = _dbContext.Customers.ToList();
+
+            var viewModel = new BookViewModel
+            {
+                BookId = book.BookId,
+                Title = book.Title,
+                AuthorId = book.Author?.ID ?? 0,
+                AuthorName = book.Author?.AuthorName ?? "Unknown",
+                BranchId = book.Branch?.ID ?? 0,
+                BranchName = book.Branch?.BranchName ?? "Unknown",
+                CustomerId = book.Customer?.ID ?? 0,
+                CustomerName = book.Customer?.CustomerName ?? "Unknown",
+            };
+
+            // Save changes
+            _dbContext.SaveChanges();
+
+            // return RedirectToAction("Index");
+
+            return View(viewModel);
+        }
         //======================VIEW======================
 
 

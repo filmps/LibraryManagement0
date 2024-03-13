@@ -40,6 +40,8 @@ namespace LibraryManagement.ViewModels
         
         
         //CUSTOMER--------------------------------------------------
+        public int CustomerId { get; set; }
+        public string? CustomerName { get; set; }
         public List<Customer> CustomerList { get; set; } = new List<Customer>();
         public Customer? CheckedOutByCustomer { get; set; }
         public string GetStatus()

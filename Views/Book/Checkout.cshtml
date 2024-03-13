@@ -1,0 +1,31 @@
+<!-- 📂Views📂Book 📑Checkout.cshtm-->
+
+@model LibraryManagement.ViewModels.BookViewModel
+<h2>Book Checkout</h2>
+
+<h1>@Model.Title</h1>
+<p>Author: @Model.AuthorName</p>
+<p>Branch: @Model.BranchName</p>
+
+
+<form asp-controller="Book" asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CheckedOutByCustomer">Checkout by Customer</label>
+        <select asp-for="CheckedOutByCustomer" asp-items='new SelectList(Model.CustomerList, "ID", "CustomerName")' class="form-control">
+            <option value="">Select a Customer</option>
+        </select>
+        <span asp-validation-for="BranchId" class="text-danger"></span>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+<p class=title>
+    <a asp-action="Index" class="BackLink">Back to Book List</a>
+</p>

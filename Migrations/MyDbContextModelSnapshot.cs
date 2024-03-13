@@ -50,6 +50,9 @@ namespace LibraryManagement.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("status")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("BookId");
 
                     b.HasIndex("AuthorId");

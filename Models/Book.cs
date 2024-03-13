@@ -28,7 +28,8 @@ namespace LibraryManagement.Models
         
         public string GetStatus()
         {
-            return (CustomerId == null && Branch != null) ? "Available" : "Not available";
+            return (CustomerId == null) ? "Available" : "Not available";
+            // return (CustomerId == null && Branch != null) ? "Available" : "Not available";
         }
     }
 }

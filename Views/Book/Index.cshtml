@@ -15,6 +15,7 @@
         <tr>
             <th>ID</th>
             <th>Book Title</th>
+            <th>Customer</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -24,7 +25,10 @@
             <tr>
                 <td>@book.BookId</td>
                 <td>@book.Title</td>
+                <td>@book.GetStatus()</td>
                 <td>
+                    <a href='@Url.Action("Checkout", "Book", new { id = book.BookId })' class="btn btn-info1">Checkout</a>
+                    &nbsp;
                     <a href='@Url.Action("Details", "Book", new { id = book.BookId })' class="btn btn-info1">Details</a>
                     &nbsp;
                     <a href='@Url.Action("Edit", "Book", new { id = book.BookId })' class="btn btn-info2">Edit</a>

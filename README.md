@@ -1,16 +1,13 @@
 //README.md
 # Project Title
-[TOCM]
 
-[TOC]
-
-# Features
+## Features
 - Author Management
 - Book Management
 - Branch Management
 - Customer Management
 
-# Installation
+## Installation
 - Install [.NET Core SDK .0](https://dotnet.microsoft.com/download)
 - Install Entity Framework Core NuGet package
 
@@ -21,7 +18,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 
-# Usage
+## Usage
 1. unzip the file
 2. cd LibraryManagement
 3. dotnet run
@@ -29,7 +26,7 @@ dotnet ef database update
 
 
 
-# Main Structure
+## Main Structure
 - 📂Data
     - ApplicationDbContext.cs : 🟢DONE
 - 📂Controller  : 🟢DONE
